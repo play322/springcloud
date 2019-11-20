@@ -17,7 +17,7 @@ import com.netflix.loadbalancer.RetryRule;
 @Configuration
 public class ConfigBean {
 	
-	@Bean
+	/*@Bean
 	@LoadBalanced  //SpringCloud Ribbon是基于NetFlix Ribbon 实现的一套客户端 负载均衡的工具。
 	public RestTemplate getRestTemplate() {
 		return new RestTemplate();
@@ -30,7 +30,7 @@ public class ConfigBean {
 		//return new RandomRule(); //随机算法代替默认的轮询
 		//先是轮询算法，当众多微服务中有一个宕机时，获取服务失败时，在指定的时间内自动获取其他可用的服务
 		return new RetryRule();
-	}
+	}*/
 	
 
 
