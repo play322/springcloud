@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <!--指明继承自谁 -->
+  <parent>
+    <groupId>com.itbjx</groupId>
+    <artifactId>microservicecloud</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <!--当前Moudle 表明自己叫什么  -->
+  <artifactId>microservicecloud-api</artifactId>
+  
+ <!--按照当前Moudle用到的架包，按自己需求添加，如果父类已经包含了可以不用写版本号 -->
+  <dependencies>
+  <dependency>
+  <groupId>org.projectlombok</groupId>
+  <artifactId>lombok</artifactId>
+  </dependency>
+
+  <!--接口+注解的feign-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-feign</artifactId>
+    </dependency>
+
+  </dependencies>
+
+</project>
