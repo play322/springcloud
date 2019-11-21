@@ -3,23 +3,24 @@ server:
 
 spring:
   application:
-    name: microservicecloud-zuul-gateway
+    name: microservicecloud-zuul-gateway   #网关组件注册进eureka中心的名称
 
 eureka:
   client:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
   instance:
-    instance-id: gateway-9527.com
-    prefer-ip-address: true
+    instance-id: gateway-9527.com   #此微服务的标识ID，可理解为别名
+    prefer-ip-address: true   #微服务标识ID显示IP地址
 
 
 
 zuul:
-  prefix: /atguigu
-  #ignored-services: microservicecloud-dept
-  ignored-services: "*"
+  prefix: /atguigu   #访问路径统一设置前缀
+  #ignored-services: microservicecloud-dept  #忽略或屏蔽单个原有对外暴露的微服务名称
+  ignored-services: "*"   #忽略或屏蔽多个原有对外暴露的微服务名称
   routes:
-    mydept.serviceId: microservicecloud-dept
-    mydept.path: /mydept/**
+    #mydept.serviceId: microservicecloud-dept #原有对外暴露的微服务名称
+    mydept.serviceId: MICROSERVICECLOUD-CONFIG-DEPT-CLIENT
+    mydept.path: /mydept/**    #用此名称代替原有微服务名称，达到屏蔽效果
 

@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: microservicecloud-config-client    #此微服务的名称
